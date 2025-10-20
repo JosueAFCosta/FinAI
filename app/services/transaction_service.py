@@ -13,7 +13,7 @@ class TransactionService:
         supabase = get_supabase_client()
         record = data.model_dump()
 
-        # 🧩 Correção: converte datetime em string antes de enviar
+        # converte datetime em string antes de enviar
         if isinstance(record.get("date"), datetime):
             record["date"] = record["date"].isoformat()
 
